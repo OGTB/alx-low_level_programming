@@ -1,25 +1,23 @@
 #include "main.h"
 /**
- * jack_bauer - entry point
- * Description: print time
- * Return: void
+ * jack_bauer - main thing
+ *
  */
-
-void jack_bauer(void);
+void jack_bauer(void)
 {
-	int x, y;
-	/**
-	 *  x - hours
-	 *  y - min.
-	 */
+	int i;
+	int j;
 
-	for ((x = 0; x <= 24; x++) && (y = 0; y <= 60; y++))
-
-	 {	
-	       printf("x/10");
-	       printf("x%10");
-	       printf(":");
-	       printf("y/10");
-	       printf("y%10\n");
-	 }
+	for (i = 0; i <= 23; i++)
+	{
+		for (j = 0; j <= 59; j++)
+		{
+			_putchar(i / 10 + '0');
+			_putchar(i % 10 + '0');
+			_putchar(':');
+			_putchar(j / 10 + '0');
+			_putchar(j % 10 + '0');
+			_putchar('\n');
+		}
+	}
 }
